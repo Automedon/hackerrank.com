@@ -27,7 +27,7 @@ When we perform  left rotations, the array undergoes the following sequence of c
 
 Thus, we print the array's final state as a single line of space-separated values, which is 5 1 2 3 4.
 */
-function solution(n,arr) {
+function rotLeft(n,arr) {
     let arrTemp = arr.slice();
     for (i = 0; i < n; i++){
         let temp=arrTemp.shift()
