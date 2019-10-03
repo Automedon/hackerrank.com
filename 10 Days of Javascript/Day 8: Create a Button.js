@@ -46,29 +46,31 @@ After  more clicks, it looks like this:
 nine clicks
 */
 //css
-#btn {
-    width:56px;
-    height:48px;
-    font-size:12px;
+.btnClass {
+    width: 96px;
+    height: 48px;
+    font-size: 24px;
 }
 //js
-const btn = document.querySelector('#btn');
-let counter = 0;
-btn.addEventListener('click', function (e) {
-      counter++;
-      btn.innerHTML = counter;
-});
+var btn = document.createElement("Button");
+
+btn.innerHTML = 0;
+btn.id = "btn";
+btn.className = "btnClass";
+
+document.body.appendChild(btn);
+
+btn.onclick = function() {
+    btn.innerHTML++;
+}
 //html
-<!-- Enter your HTML code here -->
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="css/button.css" type="text/css">
-        <meta charset="utf-8">
-        <title>Button</title>
     </head>
+    
     <body>
-        <button id='btn'>0</button>
         <script src="js/button.js" type="text/javascript"></script>
     </body>
 </html>
