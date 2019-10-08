@@ -58,9 +58,8 @@ function processData(input) {
     }
     if (input.length%2!==0){
         let z = median(input)
-        input=input.join` `.split(' '+z+' ')
-        let f = median(input[0].split` `)
-        let t = median(input[1].split` `)
+        let f = median(input.slice(0,input.length/2).join` `.split` `)
+        let t = median(input.slice(input.length/2+1).join` `.split` `)
         console.log(f)
         console.log(z)
         console.log(t)
